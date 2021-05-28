@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- APPEARANCE -->
+            <TextView
+                style="@style/HeadlineItemText"
+                android:layout_width='match_parent'
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="@string/appearance" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="@string/theme"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/theme_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp" />
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <!-- FEEDS AND ENTRIES -->
+            <TextView
+                style="@style/HeadlineItemText"
+                android:layout_width='match_parent'
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="@string/feeds_and_entries" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width='wrap_content'
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="@string/sort_feeds_by"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sort_feeds_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="end"
+                    android:padding="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width='wrap_content'
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="@string/sort_entries_by"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sort_entries_spinner"
+
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/auto_update_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="@string/auto_update_on_launch"
+                android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingBottom="16dp"
+                android:text="@string/auto_update_on_launch_description" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/keep_entries_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="@string/keep_old_unread"
+                android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingBottom="16dp"
+                android:text="@string/keep_old_unread_description" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sync_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="@string/sync_in_bg"
+                android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingBottom="16dp"
+                android:text="@string/sync_in_bg_description" />
+
+            <View style="@style/Divider" />
+
+            <!-- READING -->
+            <TextView
+                style="@style/HeadlineItemText"
+                android:layout_width='match_parent'
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="@string/reading" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/browser_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="@string/read_entries_in_app"
+                android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingBottom="16dp"
+                android:text="@string/read_entries_in_app_description" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

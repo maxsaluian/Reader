@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@string/subscriptions"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+        <Button
+            android:id="@+id/manage_button"
+            style="@style/DrawerMenuButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_manage_feeds"
+            android:text="@string/manage_feeds" />
+
+        <Button
+            android:id="@+id/add_button"
+            style="@style/DrawerMenuButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_add"
+            android:text="@string/add_feeds" />
+
+        <View style="@style/Divider" />
+
+        <Button
+            android:id="@+id/recent_entries_button"
+            style="@style/DrawerMenuButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_folder"
+            android:text="@string/new_entries" />
+
+        <Button
+            android:id="@+id/starred_entries_button"
+            style="@style/DrawerMenuButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_folder_starred"
+            android:text="@string/starred_entries" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:choiceMode="singleChoice"
+            android:nestedScrollingEnabled="false" />
+
+        <View
+            android:id="@+id/bottom_divider"
+            style="@style/Divider"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/settings_button"
+            style="@style/DrawerMenuButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_settings"
+            android:text="@string/settings" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

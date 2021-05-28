@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menuItem_search"
+        android:icon="@drawable/ic_search"
+        android:title="@string/search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="collapseActionView|always" />
+
+    <item
+        android:icon="@drawable/ic_more_vert"
+        android:title="@string/more_options"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/update_item"
+                android:icon="@drawable/ic_update"
+                android:title="@string/check_for_updates"
+                app:showAsAction="ifRoom" />
+
+            <item
+                android:id="@+id/about_feed_item"
+                android:icon="@drawable/ic_edit"
+                android:title="@string/feed_info"
+                app:showAsAction="ifRoom" />
+
+            <item
+                android:id="@+id/filter_item"
+                android:icon="@drawable/ic_filter"
+                android:title="@string/filter"
+                app:showAsAction="ifRoom" />
+
+            <item
+                android:id="@+id/mark_all_item"
+                android:title="@string/mark_all_as_read"
+                app:showAsAction="ifRoom" />
+
+            <item
+                android:id="@+id/star_all_item"
+                android:title="@string/star_all"
+                app:showAsAction="ifRoom" />
+
+            <item
+                android:id="@+id/visit_website_item"
+                android:icon="@drawable/ic_browser"
+                android:title="@string/visit_website"
+                app:showAsAction="ifRoom" />
+
+            <item
+                android:id="@+id/remove_feed_item"
+                android:icon="@drawable/ic_delete"
+                android:title="@string/remove_feed"
+                app:showAsAction="ifRoom" />
+        </menu>
+    </item>
+</menu>
